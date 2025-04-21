@@ -1,10 +1,10 @@
 # GoVault Bot 🤖🔐
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/AmarMuric04/govault-bot/ci.yml?branch=main)](https://github.com/AmarMuric04/govault-bot/actions)  
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](./LICENSE)  
-[![PyPI Version](https://img.shields.io/pypi/v/govault-bot)](https://pypi.org/project/govault-bot)
+[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Selenium](https://img.shields.io/badge/Selenium-4.x-brightgreen.svg)](https://pypi.org/project/selenium/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
 
-A simple CLI automation script that logs in to your GoVault account (or creates one), a password manager app I built with the MERN stack + Next.js.It generates a secure password, and saves it—complete with labels and notes—directly from your terminal.
+GoBot is a simple CLI automation script that logs in to your GoVault account (or creates one), a password manager app I built with the MERN stack + Next.js. It generates a secure password, and saves it, complete with labels and notes—directly from your terminal.
 
 ## Table of Contents
 
@@ -15,7 +15,6 @@ A simple CLI automation script that logs in to your GoVault account (or creates 
 - [Usage](#usage)
 - [Troubleshooting](#troubleshooting)
 - [Contributing](#contributing)
-- [Changelog](#changelog)
 - [License](#license)
 
 ---
@@ -26,7 +25,7 @@ A simple CLI automation script that logs in to your GoVault account (or creates 
 
 It allows users to generate strong passwords, store them with labels and notes, and access them across devices.
 
-This CLI bot is built to automate GoVault from your terminal — especially useful for developers or power users.
+This CLI bot is built to automate GoVault from your terminal, especially useful for developers or power users.
 
 ➡️ [Check out the GoVault source code](https://github.com/AmarMuric04/govault)
 
@@ -35,7 +34,7 @@ This CLI bot is built to automate GoVault from your terminal — especially usef
 ## Motivation
 
 Managing dozens of logins can be tedious and insecure.  
-**GoVault Bot** automates the routine: it interfaces with your [GoVault](https://govault.vercel.app) password store, so you can generate and save strong passwords without leaving your terminal.
+**GoBot** automates the routine: it interfaces with your [GoVault](https://govault.vercel.app) password store, so you can generate and save strong passwords without leaving your terminal.
 
 ---
 
@@ -63,7 +62,7 @@ Managing dozens of logins can be tedious and insecure.
 
    ```bash
    git clone https://github.com/AmarMuric04/govault-bot.git
-   cd govault-bot
+   cd gobot
    ```
 
 2. **Install dependencies**
