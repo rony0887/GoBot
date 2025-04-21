@@ -76,9 +76,9 @@ while not is_valid_password(user_password):
         )
     if is_valid_password(user_password):
         pyperclip.copy(user_password)
-    stop_process = input(
-        "\n\nThe password was copied to your clipboard!\nTake a second to save it to your .env file.\n* If you don't do this, you'll need to go to @ https://govault.vercel.app/reset-password to reset it.\n\nWhen you save the password, press Enter to continue!"
-    )
+        stop_process = input(
+            "\n\nThe password was copied to your clipboard!\nTake a second to save it to your .env file.\n* If you don't do this, you'll need to go to @ https://govault.vercel.app/reset-password to reset it.\n\nWhen you save the password, press Enter to continue!"
+        )
 
 
 def signin():
