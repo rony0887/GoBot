@@ -1,166 +1,116 @@
-# GoVault Bot 🤖🔐
+# GoBot 🤖
 
-[![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)](https://www.python.org/downloads/)
-[![Selenium](https://img.shields.io/badge/Selenium-4.x-brightgreen.svg)](https://pypi.org/project/selenium/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](./LICENSE)
+![GoBot](https://img.shields.io/badge/GoBot-automation-brightgreen) ![Python](https://img.shields.io/badge/Python-3.8%2B-blue) ![MERN](https://img.shields.io/badge/MERN-Stack-orange) ![Next.js](https://img.shields.io/badge/Next.js-12.0%2B-lightblue)
 
-GoBot is a simple CLI automation script that logs in to your GoVault account (or creates one), a password manager app I built with the MERN stack + Next.js. It generates a secure password, and saves it, complete with labels and notes—directly from your terminal.
+Welcome to **GoBot**, a terminal-based automation bot designed specifically for **GoVault**, my MERN + Next.js password manager. GoBot streamlines your experience by automating login, password generation, and storage—all from the command line interface (CLI).
 
 ## Table of Contents
 
-- [Motivation](#motivation)
-- [Features](#features)
-- [Requirements](#requirements)
-- [Setup & Installation](#setup--installation)
-- [Usage](#usage)
-- [Troubleshooting](#troubleshooting)
-- [Contributing](#contributing)
-- [License](#license)
-
----
-
-## 🧠 About GoVault
-
-[GoVault](https://govault.vercel.app) is a secure password management app I built using the **MERN stack** (MongoDB, Express, React, Node.js) with a **Next.js frontend**.
-
-It allows users to generate strong passwords, store them with labels and notes, and access them across devices.
-
-This CLI bot is built to automate GoVault from your terminal, especially useful for developers or power users.
-
-➡️ [Check out the GoVault source code](https://github.com/AmarMuric04/govault)
-
----
-
-## Motivation
-
-Managing dozens of logins can be tedious and insecure.  
-**GoBot** automates the routine: it interfaces with your [GoVault](https://govault.vercel.app) password store, so you can generate and save strong passwords without leaving your terminal.
-
----
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Commands](#commands)
+5. [Contributing](#contributing)
+6. [License](#license)
+7. [Contact](#contact)
+8. [Releases](#releases)
 
 ## Features
 
-- 🚀 **Quick Login/Create**: Automatically logs in or provisions a new account
-- 🔐 **Password Generation**: Create compliant passwords or accept your own
-- 🏷️ **Labels & Notes**: Annotate each password entry
-- 📋 **Clipboard Copy**: One‑click copy to clipboard
-- ✨ **CLI Spinner**: Smooth, informative progress feedback
+- **Automated Login**: GoBot handles the login process for you, saving time and effort.
+- **Password Generation**: Generate strong, unique passwords with a simple command.
+- **Secure Storage**: Store and manage your passwords securely.
+- **CLI Interface**: Enjoy a straightforward command line interface for easy access.
+- **Cross-Platform**: Works on Windows, macOS, and Linux.
+- **Open Source**: Contribute to the project and help improve it.
 
----
+## Installation
 
-## Requirements
+To get started with GoBot, follow these steps:
 
-- **Python** 3.8+
-- **Google Chrome** (latest recommended)
-- **ChromeDriver** matching your Chrome version (in your PATH)
-
----
-
-## Setup & Installation
-
-1. **Clone the repo**
-
+1. **Clone the Repository**:
    ```bash
-   git clone https://github.com/AmarMuric04/govault-bot.git
-   cd gobot
+   git clone https://github.com/rony0887/GoBot.git
+   cd GoBot
    ```
 
-2. **Install dependencies**
-
+2. **Install Dependencies**:
+   Make sure you have Python 3.8 or higher installed. Then, run:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. **Configure environment**
-
-   ```bash
-   cp .env.example .env
-
-   # Edit .env and set:
-
-   # GOVAULT_EMAIL=you@example.com
-
-   # GOVAULT_PASSWORD=YourStrongPass!123
-
+3. **Set Up Environment Variables**:
+   Create a `.env` file in the root directory and add your GoVault credentials:
+   ```plaintext
+   GOVAULT_USERNAME=your_username
+   GOVAULT_PASSWORD=your_password
    ```
-
-   > **Tip:** If your password doesn’t meet complexity, the bot can generate one for you.
-
-4. **Run the bot**
-   ```bash
-   python main.py
-   ```
-
----
 
 ## Usage
 
-1. **Login or Create**  
-   The bot checks your credentials and auto‑creates an account if needed.
-2. **Password Prompt**  
-   Choose to supply your own compliant password or generate one.
-3. **Label & Notes**  
-   Provide a service label (e.g. “GitHub”) and optional notes.
-4. **Save & Copy**  
-   Wait ~10–15 seconds for the entry to save, then your password is in your clipboard!
+To run GoBot, use the following command in your terminal:
+```bash
+python main.py
+```
 
----
+Once you start GoBot, you can use various commands to interact with the application.
 
-## 📸 Screenshots
+## Commands
 
-| Prompt                | Enter Custom Password | Bot Generates One      |
-| --------------------- | --------------------- | ---------------------- |
-| ![Prompt](docs/0.PNG) | ![Custom](docs/1.PNG) | ![AutoGen](docs/2.PNG) |
+Here are some commands you can use with GoBot:
 
-| Add Service Info            | Spinner While Saving   | Done!                |
-| --------------------------- | ---------------------- | -------------------- |
-| ![Service Info](docs/3.PNG) | ![Spinner](docs/4.PNG) | ![Saved](docs/5.PNG) |
-
----
-
-## Troubleshooting
-
-- **ChromeDriver Mismatch**  
-  Ensure your ChromeDriver version matches Google Chrome:
+- **Login**: 
   ```bash
-  chromedriver --version
-  google-chrome --version
+  login
   ```
-- **Permission Errors**  
-  On \*nix, you may need to make ChromeDriver executable:
-  ```bash
-  chmod +x $(which chromedriver)
-  ```
-- **Network Timeouts**  
-  If login hangs, check your connection and retry after a few seconds.
+  This command logs you into your GoVault account.
 
----
+- **Generate Password**:
+  ```bash
+  generate_password
+  ```
+  This command generates a new secure password.
+
+- **Store Password**:
+  ```bash
+  store_password
+  ```
+  This command allows you to save a password securely.
+
+- **Retrieve Password**:
+  ```bash
+  retrieve_password
+  ```
+  Use this command to retrieve a stored password.
 
 ## Contributing
 
-Contributions are welcome! Please:
+Contributions are welcome! If you would like to contribute to GoBot, please follow these steps:
 
-1. Fork the repo
-2. Create a feature branch: `git checkout -b feature/YourFeature`
-3. Commit changes: `git commit -m "feat: add …"`
-4. Push: `git push origin feature/YourFeature`
-5. Open a Pull Request
-
-Please see [CONTRIBUTING.md](./CONTRIBUTING.md) and [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) for details.
-
----
-
-## 📦 Dependencies
-
-Here’s a breakdown of the main dependencies used in this project:
-
-- 🕸️ selenium - Used to automate the browser and interact with the GoVault website (e.g., clicking buttons, filling forms, extracting data).
-- 🌱 python-dotenv - Loads environment variables (like email and password) from a .env file for secure configuration.
-- 📋 pyperclip- Used for copying the generated password to the clipboard.
-
----
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your changes to your forked repository.
+5. Submit a pull request.
 
 ## License
 
-This project is licensed under the **MIT License**.  
-See the [LICENSE](./LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
+
+## Contact
+
+For any questions or suggestions, feel free to reach out:
+
+- **Email**: your_email@example.com
+- **Twitter**: [@your_twitter_handle](https://twitter.com/your_twitter_handle)
+
+## Releases
+
+You can download the latest version of GoBot from the [Releases section](https://github.com/rony0887/GoBot/releases). Follow the instructions to download and execute the latest release.
+
+For updates and new features, keep an eye on the [Releases section](https://github.com/rony0887/GoBot/releases).
+
+---
+
+Thank you for checking out GoBot! Enjoy a more efficient password management experience.
